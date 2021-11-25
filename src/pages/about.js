@@ -18,16 +18,18 @@ const about = ({ data }) => {
   ]
   return (
     <Layout>
-      <div style={{ padding: "2rem" }}>
+      <div style={{ padding: "2rem", textTransform: "capitalize" }}>
         <h2 style={{ textAlign: "center" }}>Introduction</h2>
         <br />
+
         <h4>
-          Hey, You There! Want to deploy a coin but don't have capital yet?
-          Tired of always getting rugged/scammed? The world of BSC tokens is a
-          crazy place filled with rug pulls and all sorts of nasty scams. Sick
-          and tired of the endless nonsense, Our mission is simple, reward
-          normal buyers with great gains and avoid whales at all costs by using
-          anti-whale tokenomics.
+          <br />
+          Want to deploy a coin but don't have capital yet? Tired of always
+          getting rugged/scammed? The world of BSC tokens is a crazy place
+          filled with rug pulls and all sorts of nasty scams. Sick and tired of
+          the endless nonsense, Our mission is simple, reward normal buyers with
+          great gains and avoid whales at all costs by using anti-whale
+          tokenomics.
         </h4>
 
         <h4>
