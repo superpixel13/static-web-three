@@ -8,12 +8,12 @@ const about = ({ data }) => {
   const tokenomics = [
     "Verified Contract",
     "Tokenomics: 13% Tax ( 8% Back to the Liquidity Pool, 5% Redistributed to Holders)",
-    "Total Supply: 100,000,000",
+    "Total Supply: 1,000,000,000,000,000",
     "Max Buy 1,000,000",
     "Auto add Liquidity",
     "3% Team wallet",
     "5% Marketing Fund",
-    "70% Burnt Supply",
+    "50% Burnt Supply",
     " Liquidity Lock",
   ]
   return (

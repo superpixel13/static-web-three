@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 
 export default function Home({ data }) {
   const { nodes } = data.allMarkdownRemark
+  console.log(data)
 
   return (
     <Layout>
@@ -32,10 +33,10 @@ export default function Home({ data }) {
           </a>
         </div>
 
-        <img
+        <Img
           style={{ maxWidth: "100%" }}
           alt="abstract-building"
-          src="/abstract-building.png"
+          fluid={data.file.childImageSharp.fluid}
         />
       </section>
       <div className={portfolio} style={{ marginTop: "35vh" }}>
@@ -57,7 +58,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativePath: { eq: "abstract-building.png" }) {
+    file(relativePath: { eq: "building.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
