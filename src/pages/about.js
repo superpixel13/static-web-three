@@ -1,3 +1,4 @@
+// import { Slider } from "@mui/material"
 import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
@@ -16,6 +17,29 @@ const about = ({ data }) => {
     "50% Burnt Supply",
     " Liquidity Lock",
   ]
+
+  // const marks = [
+  //   {
+  //     value: 0,
+  //     label: "0°C",
+  //   },
+  //   {
+  //     value: 20,
+  //     label: "20°C",
+  //   },
+  //   {
+  //     value: 37,
+  //     label: "37°C",
+  //   },
+  //   {
+  //     value: 100,
+  //     label: "100°C",
+  //   },
+  // ]
+
+  const valueText = value => {
+    return `${value}°C`
+  }
   return (
     <Layout>
       <div style={{ padding: "2rem", textTransform: "capitalize" }}>
@@ -41,7 +65,9 @@ const about = ({ data }) => {
         </h4>
       </div>
 
-      <h2 style={{ textAlign: "center" }}>{tokenData.title}'s Tokenomics</h2>
+      <h2 style={{ textAlign: "center", textTransform: "capitalize" }}>
+        {tokenData.title}'s Tokenomics
+      </h2>
       <section style={{ padding: "2rem" }}>
         {tokenomics.map(item => (
           <div>
@@ -49,6 +75,17 @@ const about = ({ data }) => {
           </div>
         ))}
       </section>
+      {/* <section>
+        <Slider
+          aria-label="Temperature"
+          defaultValue={20}
+          disabled
+          step={null}
+          valueLabelDisplay="auto"
+          marks={marks}
+          getAriaValueText={valueText}
+        />
+      </section> */}
     </Layout>
   )
 }

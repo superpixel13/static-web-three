@@ -12,7 +12,7 @@ body {
   min-height: 100%;
 }
 body {
-  background: radial-gradient(at top left, #2980b9 0%, #2c3e50 100%);
+  background: radial-gradient(at top left, #fd746c 0%, #ff9068 100%);
   background-repeat: no-repeat;
 }
 p {
@@ -29,6 +29,12 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 40px auto 10vh;
+}
+nav .title {
+  background: -webkit-linear-gradient(#fd746c 0%, #ff9068 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: capitalize;
 }
 nav .links {
   display: inline-block;

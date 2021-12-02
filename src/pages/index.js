@@ -8,7 +8,23 @@ import { Grid } from "@mui/material"
 
 export default function Home({ data }) {
   const { nodes } = data.allMarkdownRemark
-  console.log(data)
+
+  const fillers = [
+    {
+      title: "Safe & Secure",
+      description:
+        "Liquidity will be fully locked and 1% of every buy will go to the Liquidity",
+    },
+    {
+      title: "Passive Income",
+      description:
+        "1% Reflection Rewards will be distributed on each transaction fee based on the share of the buffed billionaire maker",
+    },
+    {
+      title: "Marketing",
+      description: "10% is devoted towards marketing.",
+    },
+  ]
 
   return (
     <Layout>
@@ -21,14 +37,20 @@ export default function Home({ data }) {
       >
         <Grid item md={6}>
           <div>
-            <h2>Invest</h2>
+            <h2>Buy</h2>
             <h3>Hold & Gain</h3>
             <p style={{ textTransform: "capitalize" }}>
-              We are excited to announce our new token! Kishubonk! Gain BNB as
-              you hold and wait! watch as our token soar high through the clouds
-              and break through the orbit!
+              We are excited to announce our new token!{" "}
+              <span style={{ color: "#fd746c", fontWeight: "bold" }}>
+                Buffed Billionaire Maker!{" "}
+              </span>
+              Gain BNB as you hold and wait! watch as our token soar high
+              through the clouds and break through the orbit!
             </p>
-            <a className={btn} href="https://pancakeswap.finance/profile">
+            <a
+              className={btn}
+              href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x86160023E2A324E1714a2c61147aEf06D0175267"
+            >
               <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ marginRight: "0.5rem" }}>Buy on Pancakeswap</div>
                 <span>
@@ -50,6 +72,51 @@ export default function Home({ data }) {
           />
         </Grid>
       </Grid>
+      {/* Section 1 */}
+      <Grid
+        container
+        alignItems="center"
+        justifyContent="center"
+        style={{ textAlign: "center", marginTop: "40vh" }}
+      >
+        <Grid item style={{ marginBottom: "2rem" }}>
+          <h2 style={{ textTransform: "capitalize" }}>What our token offers</h2>
+          <hr
+            style={{
+              width: "100%",
+            }}
+          />
+        </Grid>
+        <Grid
+          container
+          item
+          justifyContent="center"
+          style={{
+            width: "100%",
+            objectFit: "contain",
+            textAlign: "center",
+          }}
+        >
+          {fillers.map(item => (
+            <Grid
+              item
+              xs={12}
+              style={{
+                maxWidth: "20rem",
+                height: "30vh",
+                backgroundColor: "#C02425",
+                borderRadius: "1rem",
+                margin: "1rem",
+                padding: "1rem",
+              }}
+            >
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </Grid>
+          ))}
+        </Grid>
+      </Grid>
+      {/* Section 2 */}
       <Grid
         container
         alignItems="center"
@@ -91,7 +158,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativePath: { eq: "building.png" }) {
+    file(relativePath: { eq: "money.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

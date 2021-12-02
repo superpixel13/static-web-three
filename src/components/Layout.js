@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         <Navbar />
         <div className="content">{children}</div>
         <footer>
-          <p>Copyright 2021 Kishubonk</p>
+          <p>Copyright 2021 Buffed Billionaire Maker</p>
         </footer>
       </div>
       <Particles

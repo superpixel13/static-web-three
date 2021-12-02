@@ -26,9 +26,9 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "Kishubonk",
+    title: "buffed billionaire maker",
     description:
-      "Kishubonk is a decentralized community token made for future generations to last",
-    copyright: "This Website is copyright 2021 Kishubonk",
+      "Buffed Billionaire Maker is a decentralized community token made for future generations to last",
+    copyright: "This Website is copyright 2021 Buffed Billionaire Maker",
   },
 }
