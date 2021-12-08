@@ -22,7 +22,7 @@ const about = ({ data }) => {
   return (
     <Layout>
       <div style={{ padding: "2rem", textTransform: "capitalize" }}>
-        <h2 style={{ textAlign: "center" }}>Introduction</h2>
+        <h2 style={{ textAlign: "center" }}>Introductions</h2>
         <br />
 
         <p>
