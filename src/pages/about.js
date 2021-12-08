@@ -16,9 +16,6 @@ const about = ({ data }) => {
     " Liquidity Lock",
   ]
 
-  const valueText = value => {
-    return `${value}°C`
-  }
   return (
     <Layout>
       <div style={{ padding: "2rem", textTransform: "capitalize" }}>

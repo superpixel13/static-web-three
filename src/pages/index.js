@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { header, btn } from "../styles/home.module.css"
-import { project, portfolio } from "../styles/projects.module.css"
 import Img from "gatsby-image"
 import { Grid } from "@mui/material"
 import CardComponent from "../components/CardComponent"
@@ -68,7 +67,7 @@ export default function Home({ data }) {
             <a
               style={{ backgroundColor: "#6338AC" }}
               className={btn}
-              // href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=token"
+              href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=token"
             >
               <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ marginRight: "0.5rem" }}>Buy on Pancakeswap</div>
