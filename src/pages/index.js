@@ -18,8 +18,7 @@ export default function Home({ data }) {
     },
     {
       title: "Passive Income",
-      description:
-        "1% Reflection Rewards will be distributed on each transaction fee based on the share of the buffed billionaire maker",
+      description: `1% Reflection Rewards will be distributed on each transaction fee based on the share of this token ${tokenInfo.title}`,
     },
     {
       title: "Marketing",
