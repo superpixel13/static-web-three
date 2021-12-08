@@ -12,7 +12,7 @@ body {
   min-height: 100%;
 }
 body {
-  background: radial-gradient(at top left, #fd746c 0%, #ff9068 100%);
+  background: radial-gradient(at top left, #70a1ff 0%, #ff6b81 100%);
   background-repeat: no-repeat;
 }
 p {
@@ -31,7 +31,7 @@ nav {
   margin: 40px auto 10vh;
 }
 nav .title {
-  background: -webkit-linear-gradient(#fd746c 0%, #ff9068 100%);
+  background: -webkit-linear-gradient(#70a1ff 0%, #ff6b81 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: capitalize;

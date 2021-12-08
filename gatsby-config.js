@@ -26,9 +26,9 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "buffed billionaire maker",
+    title: "Sonofcat",
     description:
-      "Buffed Billionaire Maker is a decentralized community token made for future generations to last",
-    copyright: "This Website is copyright 2021 Buffed Billionaire Maker",
+      "Sonofcat is a decentralized community token made for future generations to last",
+    copyright: "This Website is copyright 2021 Sonofcat",
   },
 }

@@ -1,10 +1,8 @@
-// import { Slider } from "@mui/material"
 import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
 
 const about = ({ data }) => {
-  console.log(data)
   const tokenData = data.allSite.nodes[0].siteMetadata
   const tokenomics = [
     "Verified Contract",
@@ -14,28 +12,9 @@ const about = ({ data }) => {
     "Auto add Liquidity",
     "3% Team wallet",
     "5% Marketing Fund",
-    "50% Burnt Supply",
+    "2% Liquidity Burn",
     " Liquidity Lock",
   ]
-
-  // const marks = [
-  //   {
-  //     value: 0,
-  //     label: "0°C",
-  //   },
-  //   {
-  //     value: 20,
-  //     label: "20°C",
-  //   },
-  //   {
-  //     value: 37,
-  //     label: "37°C",
-  //   },
-  //   {
-  //     value: 100,
-  //     label: "100°C",
-  //   },
-  // ]
 
   const valueText = value => {
     return `${value}°C`
@@ -46,7 +25,7 @@ const about = ({ data }) => {
         <h2 style={{ textAlign: "center" }}>Introduction</h2>
         <br />
 
-        <h4>
+        <p>
           <br />
           Want to deploy a coin but don't have capital yet? Tired of always
           getting rugged/scammed? The world of BSC tokens is a crazy place
@@ -54,15 +33,24 @@ const about = ({ data }) => {
           the endless nonsense, Our mission is simple, reward normal buyers with
           great gains and avoid whales at all costs by using anti-whale
           tokenomics.
-        </h4>
+        </p>
 
-        <h4>
+        <p>
           <br />
           We are a team of experienced marketers behind the scenes working to
           make sure that this project is successful, and that our early adopters
           can get the most gains out of it! This project definitely stands a
           good chance of making exponential profits for those who buy in now.
-        </h4>
+        </p>
+
+        <p>
+          <br />
+          Our project has a solid tech with self-enhancing mechanisms leading to
+          exponential growth and we aim to elevate the entire community to to
+          financial freedom, we have different developers around the globe to
+          support our vision. we are more than a community, so join us and be
+          part of our team!
+        </p>
       </div>
 
       <h2 style={{ textAlign: "center", textTransform: "capitalize" }}>

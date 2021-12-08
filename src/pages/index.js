@@ -5,9 +5,11 @@ import { header, btn } from "../styles/home.module.css"
 import { project, portfolio } from "../styles/projects.module.css"
 import Img from "gatsby-image"
 import { Grid } from "@mui/material"
+import CardComponent from "../components/CardComponent"
 
 export default function Home({ data }) {
   const { nodes } = data.allMarkdownRemark
+  const tokenInfo = data.allSite.nodes[0].siteMetadata
 
   const fillers = [
     {
@@ -25,7 +27,6 @@ export default function Home({ data }) {
       description: "10% is devoted towards marketing.",
     },
   ]
-
   return (
     <Layout>
       <Grid
@@ -37,19 +38,37 @@ export default function Home({ data }) {
       >
         <Grid item md={6}>
           <div>
-            <h2>Buy</h2>
-            <h3>Hold & Gain</h3>
+            <h2>Ape In</h2>
+            <h3>Gain as you wait</h3>
             <p style={{ textTransform: "capitalize" }}>
-              We are excited to announce our new token!{" "}
+              Welcome to{" "}
               <span style={{ color: "#fd746c", fontWeight: "bold" }}>
-                Buffed Billionaire Maker!{" "}
+                {tokenInfo.title}
               </span>
-              Gain BNB as you hold and wait! watch as our token soar high
-              through the clouds and break through the orbit!
+              ! Our coin is more than a token, it is a mantra uttered by
+              degenerates and our followers all around our community! It’s about
+              manifesting your wildest crypto gains into reality.
             </p>
             <a
+              style={{ marginRight: "1rem" }}
               className={btn}
-              href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x86160023E2A324E1714a2c61147aEf06D0175267"
+              href="twitter.com"
+            >
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <div style={{ marginRight: "0.5rem" }}>Check us on twitter</div>
+                <span>
+                  <img
+                    src="/twitter.png"
+                    alt="twitter"
+                    style={{ maxWidth: "2.2rem" }}
+                  />
+                </span>
+              </div>
+            </a>
+            <a
+              style={{ backgroundColor: "#6338AC" }}
+              className={btn}
+              // href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=token"
             >
               <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ marginRight: "0.5rem" }}>Buy on Pancakeswap</div>
@@ -66,7 +85,7 @@ export default function Home({ data }) {
         </Grid>
         <Grid item md={6}>
           <Img
-            style={{ maxWidth: "100%" }}
+            style={{ maxWidth: "30rem" }}
             alt="abstract-building"
             fluid={data.file.childImageSharp.fluid}
           />
@@ -103,15 +122,14 @@ export default function Home({ data }) {
               xs={12}
               style={{
                 maxWidth: "20rem",
-                height: "30vh",
-                backgroundColor: "#C02425",
-                borderRadius: "1rem",
+                opacity: "0.8",
                 margin: "1rem",
-                padding: "1rem",
               }}
             >
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <CardComponent
+                title={item.title}
+                description={item.description}
+              />
             </Grid>
           ))}
         </Grid>
@@ -158,7 +176,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativePath: { eq: "money.png" }) {
+    file(relativePath: { eq: "cat.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -177,6 +195,13 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+    allSite {
+      nodes {
+        siteMetadata {
+          title
         }
       }
     }

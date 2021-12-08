@@ -2,8 +2,19 @@ import React from "react"
 import Navbar from "./Navbar"
 import Particles from "react-tsparticles"
 import "../styles/global.css"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  console.log(data)
   return (
     <div>
       <div
@@ -13,7 +24,7 @@ const Layout = ({ children }) => {
         <Navbar />
         <div className="content">{children}</div>
         <footer>
-          <p>Copyright 2021 Buffed Billionaire Maker</p>
+          <p>Copyright 2021 {data.site.siteMetadata.title}</p>
         </footer>
       </div>
       <Particles
@@ -35,18 +46,13 @@ const Layout = ({ children }) => {
               value: "#ffffff",
             },
             shape: {
-              type: "circle",
+              type: "star",
               stroke: {
                 width: 0,
                 color: "#000000",
               },
               polygon: {
                 nb_sides: 5,
-              },
-              image: {
-                src: "images/github.svg",
-                width: 100,
-                height: 100,
               },
             },
             opacity: {
