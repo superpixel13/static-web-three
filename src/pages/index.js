@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { header, btn } from "../styles/home.module.css"
 import Img from "gatsby-image"
-import { Grid } from "@mui/material"
+import { Fab, Grid } from "@mui/material"
 import CardComponent from "../components/CardComponent"
 
 export default function Home({ data }) {
@@ -33,6 +33,7 @@ export default function Home({ data }) {
         className={header}
         spacing={4}
       >
+        {/* https://t.me/SoNoFcAt */}
         <Grid item md={6}>
           <div>
             <h2>Ape In</h2>
@@ -46,7 +47,7 @@ export default function Home({ data }) {
               degenerates and our followers all around our community! It’s about
               manifesting your wildest crypto gains into reality.
             </p>
-            <a
+            {/* <a
               style={{ marginRight: "1rem" }}
               className={btn}
               href="https://twitter.com/SonOfcat_C?s=20"
@@ -61,7 +62,7 @@ export default function Home({ data }) {
                   />
                 </span>
               </div>
-            </a>
+            </a> */}
             <a
               style={{ backgroundColor: "#6338AC" }}
               className={btn}
@@ -79,6 +80,29 @@ export default function Home({ data }) {
               </div>
             </a>
           </div>
+          <Fab
+            style={{
+              backgroundColor: "#80C9EC",
+            }}
+            href="https://t.me/SoNoFcAt"
+          >
+            <img
+              src="/telegramlogo.png"
+              alt="pancake"
+              style={{ maxWidth: "2rem" }}
+            />
+          </Fab>
+          <Fab
+            color="primary"
+            style={{ margin: "1rem" }}
+            href="https://twitter.com/SonOfcat_C?s=20"
+          >
+            <img
+              src="/twitter.png"
+              alt="twitter"
+              style={{ maxWidth: "2.2rem" }}
+            />
+          </Fab>
         </Grid>
         <Grid item md={6}>
           <Img
