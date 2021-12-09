@@ -8,7 +8,6 @@ const about = ({ data }) => {
     "Verified Contract",
     "Tokenomics: 13% Tax ( 8% Back to the Liquidity Pool, 5% Redistributed to Holders)",
     "Total Supply: 1,000,000,000,000,000",
-    "Max Buy 1,000,000",
     "Auto add Liquidity",
     "3% Team wallet",
     "10% Marketing Fund",
@@ -60,6 +59,10 @@ const about = ({ data }) => {
           </div>
         ))}
       </section>
+      <div style={{ textAlign: "center" }}>
+        <h3>Roadmap to be Announced.</h3>
+        <p>Please wait for further announcement here in our website.</p>
+      </div>
       {/* <section>
         <Slider
           aria-label="Temperature"
