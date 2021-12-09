@@ -49,7 +49,7 @@ export default function Home({ data }) {
             <a
               style={{ marginRight: "1rem" }}
               className={btn}
-              href="twitter.com"
+              href="https://twitter.com/SonOfcat_C?s=20"
             >
               <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ marginRight: "0.5rem" }}>Check us on twitter</div>
