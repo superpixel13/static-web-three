@@ -7,7 +7,6 @@ import { Grid } from "@mui/material"
 import CardComponent from "../components/CardComponent"
 
 export default function Home({ data }) {
-  const { nodes } = data.allMarkdownRemark
   const tokenInfo = data.allSite.nodes[0].siteMetadata
 
   const fillers = [
@@ -94,7 +93,7 @@ export default function Home({ data }) {
         container
         alignItems="center"
         justifyContent="center"
-        style={{ textAlign: "center", marginTop: "40vh" }}
+        style={{ textAlign: "center", marginTop: "20vh", marginBottom: "40vh" }}
       >
         <Grid item style={{ marginBottom: "2rem" }}>
           <h2 style={{ textTransform: "capitalize" }}>What our token offers</h2>
@@ -133,41 +132,6 @@ export default function Home({ data }) {
         </Grid>
       </Grid>
       {/* Section 2 */}
-      <Grid
-        container
-        alignItems="center"
-        justifyContent="center"
-        style={{ textAlign: "center", marginTop: "40vh" }}
-      >
-        <Grid item style={{ marginBottom: "2rem" }}>
-          <h2>Developed Projects</h2>
-          <h3 style={{ lineHeight: "4rem" }}>
-            Projects and Tokens We've Created
-          </h3>
-        </Grid>
-        <Grid
-          container
-          spacing={4}
-          item
-          justifyContent="center"
-          style={{
-            width: "100%",
-            objectFit: "contain",
-            textAlign: "center",
-          }}
-        >
-          {nodes.map(item => (
-            <Grid item xs={12} style={{ maxWidth: "30rem" }}>
-              <Img
-                style={{ borderRadius: "3rem" }}
-                fluid={item.frontmatter.thumb.childImageSharp.fluid}
-              />
-              <h3 style={{ marginTop: "1rem" }}>{item.frontmatter.title}</h3>
-              <p>{item.frontmatter.stack}</p>
-            </Grid>
-          ))}
-        </Grid>
-      </Grid>
     </Layout>
   )
 }

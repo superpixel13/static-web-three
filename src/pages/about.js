@@ -11,7 +11,7 @@ const about = ({ data }) => {
     "Max Buy 1,000,000",
     "Auto add Liquidity",
     "3% Team wallet",
-    "5% Marketing Fund",
+    "10% Marketing Fund",
     "2% Liquidity Burn",
     " Liquidity Lock",
   ]
