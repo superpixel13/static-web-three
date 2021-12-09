@@ -66,7 +66,7 @@ export default function Home({ data }) {
             <a
               style={{ backgroundColor: "#6338AC" }}
               className={btn}
-              href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=token"
+              href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x4b3260056bb8271dc9a01bd4c1f33821110b5443"
             >
               <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ marginRight: "0.5rem" }}>Buy on Pancakeswap</div>
