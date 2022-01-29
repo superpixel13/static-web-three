@@ -26,9 +26,8 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "Sonofcat",
+    title: "OSAKAINU2K22",
     description:
-      "Sonofcat is a decentralized community token made for future generations to last",
-    copyright: "This Website is copyright 2021 Sonofcat",
+      "Capitalize on low hanging price to identify a ballpark valuation activity. Override the digitally arranged coins.",
   },
 }

@@ -12,7 +12,7 @@ body {
   min-height: 100%;
 }
 body {
-  background: radial-gradient(at top left, #70a1ff 0%, #ff6b81 100%);
+  background: radial-gradient(at top left, black 0%, white 100%);
   background-repeat: no-repeat;
 }
 p {
@@ -31,9 +31,10 @@ nav {
   margin: 40px auto 10vh;
 }
 nav .title {
-  background: -webkit-linear-gradient(#70a1ff 0%, #ff6b81 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* background: -webkit-linear-gradient(#a37200 0%, #f98761 100%); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  text-shadow: 2px 2px 1px black;
   text-transform: capitalize;
 }
 nav .links {

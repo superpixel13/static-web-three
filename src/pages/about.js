@@ -1,8 +1,11 @@
+import { Grid, Slider } from "@mui/material"
 import { graphql } from "gatsby"
 import React from "react"
+// import CardComponent from "../components/CardComponent"
 import Layout from "../components/Layout"
 
 const about = ({ data }) => {
+  // const [value, setValue] = useState(0)
   const tokenData = data.allSite.nodes[0].siteMetadata
   const tokenomics = [
     "Verified Contract",
@@ -17,7 +20,17 @@ const about = ({ data }) => {
 
   return (
     <Layout>
-      <div style={{ padding: "2rem", textTransform: "capitalize" }}>
+      <div
+        style={{
+          padding: "2rem",
+          textTransform: "capitalize",
+          backgroundColor: "#ad4200",
+          maxWidth: "75rem",
+          marginLeft: "0.1rem",
+          borderRadius: "1rem",
+          color: "black",
+        }}
+      >
         <h2 style={{ textAlign: "center" }}>Introductions</h2>
         <br />
 
@@ -49,19 +62,69 @@ const about = ({ data }) => {
         </p>
       </div>
 
-      <h2 style={{ textAlign: "center", textTransform: "capitalize" }}>
+      <h2
+        style={{
+          textAlign: "center",
+          textTransform: "capitalize",
+          marginTop: "2rem",
+        }}
+      >
         {tokenData.title}'s Tokenomics
       </h2>
       <section style={{ padding: "2rem" }}>
-        {tokenomics.map(item => (
-          <div>
+        {tokenomics.map((item, index) => (
+          <div key={index}>
             <p>&#x2705; {item}</p>
           </div>
         ))}
       </section>
       <div style={{ textAlign: "center" }}>
-        <h3>Roadmap to be Announced.</h3>
-        <p>Please wait for further announcement here in our website.</p>
+        <h3>Roadmap</h3>
+        <p>Initial Plan for {tokenData.title}</p>
+        <Grid
+          container
+          style={{
+            position: "relative",
+            top: "10%",
+            left: "50%",
+            transform: "translate(-50%, -5%)",
+            width: "50%",
+          }}
+          alignItems={"center"}
+        >
+          <Grid item xs={12}>
+            {/* <CardComponent
+              title={
+                value === 0
+                  ? "Preperation"
+                  : value === 10
+                  ? "Preperation"
+                  : value === 20
+                  ? "Initial Launch"
+                  : value === 30
+                  ? "Coingecko Listing"
+                  : value === 40
+                  ? "Coings Hunt Listing"
+                  : value === 50
+                  ? "Dexxtools Listing"
+                  : "Launchpool Rewards"
+              }
+            /> */}
+          </Grid>
+        </Grid>
+
+        <Slider
+          aria-label="Token Roadmap"
+          defaultValue={0}
+          // getAriaValueText={valuetext}
+          // valueLabelDisplay="auto"
+          step={10}
+          marks
+          min={10}
+          max={60}
+          // value={value}
+          // onChange={e => setValue(e.target.value)}
+        />
       </div>
       {/* <section>
         <Slider

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { header, btn } from "../styles/home.module.css"
 import Img from "gatsby-image"
-import { Fab, Grid } from "@mui/material"
+import { Grid } from "@mui/material"
 import CardComponent from "../components/CardComponent"
 
 export default function Home({ data }) {
@@ -31,21 +31,25 @@ export default function Home({ data }) {
         justifyContent="center"
         alignItems="center"
         className={header}
-        spacing={4}
+        style={{
+          backgroundColor: "#F1D593",
+          maxWidth: "75rem",
+          marginLeft: "0.1rem",
+          borderRadius: "1rem",
+        }}
       >
-        {/* https://t.me/SoNoFcAt */}
-        <Grid item md={6}>
+        <Grid item md={6} style={{ padding: "2rem" }}>
           <div>
-            <h2>Ape In</h2>
-            <h3>Gain as you wait</h3>
-            <p style={{ textTransform: "capitalize" }}>
-              Welcome to{" "}
-              <span style={{ color: "#fd746c", fontWeight: "bold" }}>
+            <h2 style={{ textShadow: "2px 2px 2px black" }}>
+              Access the power of the blockchain.
+            </h2>
+            {/* <h3></h3> */}
+            <p style={{ textTransform: "capitalize", color: "#332300" }}>
+              <span style={{ color: "#896001", fontWeight: "bold" }}>
                 {tokenInfo.title}
-              </span>
-              ! Our coin is more than a token, it is a mantra uttered by
-              degenerates and our followers all around our community! It’s about
-              manifesting your wildest crypto gains into reality.
+              </span>{" "}
+              is a decentralized marketing platform that allows merchants and
+              affiliates to participate.
             </p>
             {/* <a
               style={{ marginRight: "1rem" }}
@@ -63,10 +67,12 @@ export default function Home({ data }) {
                 </span>
               </div>
             </a> */}
+
             <a
-              style={{ backgroundColor: "#6338AC" }}
+              style={{ backgroundColor: "#17838D" }}
               className={btn}
-              href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x4b3260056bb8271dc9a01bd4c1f33821110b5443"
+              href="pancakeswap"
+              // href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x4b3260056bb8271dc9a01bd4c1f33821110b5443"
             >
               <div style={{ display: "flex", alignItems: "center" }}>
                 <div style={{ marginRight: "0.5rem" }}>Buy on Pancakeswap</div>
@@ -80,7 +86,7 @@ export default function Home({ data }) {
               </div>
             </a>
           </div>
-          <Fab
+          {/* <Fab
             style={{
               backgroundColor: "#80C9EC",
             }}
@@ -91,8 +97,8 @@ export default function Home({ data }) {
               alt="pancake"
               style={{ maxWidth: "2rem" }}
             />
-          </Fab>
-          <Fab
+          </Fab> */}
+          {/* <Fab
             color="primary"
             style={{ margin: "1rem" }}
             href="https://twitter.com/SonOfcat_C?s=20"
@@ -102,11 +108,11 @@ export default function Home({ data }) {
               alt="twitter"
               style={{ maxWidth: "2.2rem" }}
             />
-          </Fab>
+          </Fab> */}
         </Grid>
         <Grid item md={6}>
           <Img
-            style={{ maxWidth: "30rem" }}
+            style={{ maxWidth: "30rem", marginLeft: "2rem" }}
             alt="abstract-building"
             fluid={data.file.childImageSharp.fluid}
           />
@@ -137,8 +143,9 @@ export default function Home({ data }) {
             textAlign: "center",
           }}
         >
-          {fillers.map(item => (
+          {fillers.map((item, index) => (
             <Grid
+              key={index}
               item
               xs={12}
               style={{
@@ -162,7 +169,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativePath: { eq: "cat.png" }) {
+    file(relativePath: { eq: "osakainu.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
