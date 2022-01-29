@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { header, btn } from "../styles/home.module.css"
 import Img from "gatsby-image"
-import { Grid } from "@mui/material"
+import { Fab, Grid } from "@mui/material"
 import CardComponent from "../components/CardComponent"
 
 export default function Home({ data }) {
@@ -86,18 +86,19 @@ export default function Home({ data }) {
               </div>
             </a>
           </div>
-          {/* <Fab
+          <Fab
             style={{
               backgroundColor: "#80C9EC",
+              marginTop: "2rem",
             }}
-            href="https://t.me/SoNoFcAt"
+            href="https://t.me/OsakaInu2K22"
           >
             <img
               src="/telegramlogo.png"
               alt="pancake"
               style={{ maxWidth: "2rem" }}
             />
-          </Fab> */}
+          </Fab>
           {/* <Fab
             color="primary"
             style={{ margin: "1rem" }}

@@ -1,21 +1,28 @@
 import { Grid, Slider } from "@mui/material"
 import { graphql } from "gatsby"
-import React from "react"
-// import CardComponent from "../components/CardComponent"
+import React, { useState } from "react"
+import CardComponent from "../components/CardComponent"
 import Layout from "../components/Layout"
 
-const about = ({ data }) => {
-  // const [value, setValue] = useState(0)
+const About = ({ data }) => {
+  const [value, setValue] = useState(0)
   const tokenData = data.allSite.nodes[0].siteMetadata
   const tokenomics = [
     "Verified Contract",
     "Tokenomics: 13% Tax ( 8% Back to the Liquidity Pool, 5% Redistributed to Holders)",
     "Total Supply: 1,000,000,000,000,000",
+    "Coinshunt listing",
+    "Lock Liquidity on Mudra",
+    "Trend in Dextools",
+    "Coinmarketcap Listing",
+    "Coingecko Listing",
+    "Continuous Marketing with Infuencers",
     "Auto add Liquidity",
-    "3% Team wallet",
+    "8% Team wallet",
     "10% Marketing Fund",
-    "2% Liquidity Burn",
-    " Liquidity Lock",
+    "50% Liquidity Burn",
+    "42% pancakeswap",
+    "Liquidity Lock",
   ]
 
   return (
@@ -93,7 +100,7 @@ const about = ({ data }) => {
           alignItems={"center"}
         >
           <Grid item xs={12}>
-            {/* <CardComponent
+            <CardComponent
               title={
                 value === 0
                   ? "Preperation"
@@ -109,7 +116,7 @@ const about = ({ data }) => {
                   ? "Dexxtools Listing"
                   : "Launchpool Rewards"
               }
-            /> */}
+            />
           </Grid>
         </Grid>
 
@@ -122,26 +129,15 @@ const about = ({ data }) => {
           marks
           min={10}
           max={60}
-          // value={value}
-          // onChange={e => setValue(e.target.value)}
+          value={value}
+          onChange={e => setValue(e.target.value)}
         />
       </div>
-      {/* <section>
-        <Slider
-          aria-label="Temperature"
-          defaultValue={20}
-          disabled
-          step={null}
-          valueLabelDisplay="auto"
-          marks={marks}
-          getAriaValueText={valueText}
-        />
-      </section> */}
     </Layout>
   )
 }
 
-export default about
+export default About
 
 export const query = graphql`
   query MyQuery {
