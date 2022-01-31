@@ -126,6 +126,25 @@ export default function Home({ data }) {
         justifyContent="center"
         style={{ textAlign: "center", marginTop: "20vh", marginBottom: "40vh" }}
       >
+        <Grid item xs={12} style={{ marginBottom: "10rem" }}>
+          <h2 style={{ textShadow: "2px 2px 2px black", marginBottom: "2rem" }}>
+            Welcome to {tokenInfo.title}!
+          </h2>
+          <div>
+            <video
+              autoPlay
+              loop
+              muted
+              style={{
+                borderRadius: "2.1rem 2rem 2.1rem",
+                width: "80%",
+                objectFit: "contain",
+              }}
+            >
+              <source type="video/mp4" src="/osakainu2k22Video.mp4"></source>
+            </video>
+          </div>
+        </Grid>
         <Grid item style={{ marginBottom: "2rem" }}>
           <h2 style={{ textTransform: "capitalize" }}>What our token offers</h2>
           <hr
