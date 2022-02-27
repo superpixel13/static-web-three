@@ -26,7 +26,7 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "OSAKAINU2K22",
+    title: "Tiger Charm",
     description:
       "Capitalize on low hanging price to identify a ballpark valuation activity. Override the digitally arranged coins.",
   },

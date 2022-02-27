@@ -31,14 +31,16 @@ const About = ({ data }) => {
         style={{
           padding: "2rem",
           textTransform: "capitalize",
-          backgroundColor: "#ad4200",
+          backgroundColor: "#273c75",
           maxWidth: "75rem",
           marginLeft: "0.1rem",
           borderRadius: "1rem",
           color: "black",
         }}
       >
-        <h2 style={{ textAlign: "center" }}>Introductions</h2>
+        <h2 style={{ textAlign: "center", textShadow: "2px 2px 2px black" }}>
+          Introductions
+        </h2>
         <br />
 
         <p>
@@ -67,25 +69,26 @@ const About = ({ data }) => {
           support our vision. we are more than a community, so join us and be
           part of our team!
         </p>
+        <hr style={{ margin: "2rem 0" }} />
+        <h2
+          style={{
+            textAlign: "center",
+            textTransform: "capitalize",
+            marginTop: "2rem",
+            textShadow: "2px 2px 2px black",
+          }}
+        >
+          {tokenData.title}'s Tokenomics
+        </h2>
+        <section style={{ padding: "1rem" }}>
+          {tokenomics.map((item, index) => (
+            <div key={index}>
+              <p>&#x2705; {item}</p>
+            </div>
+          ))}
+        </section>
       </div>
-
-      <h2
-        style={{
-          textAlign: "center",
-          textTransform: "capitalize",
-          marginTop: "2rem",
-        }}
-      >
-        {tokenData.title}'s Tokenomics
-      </h2>
-      <section style={{ padding: "2rem" }}>
-        {tokenomics.map((item, index) => (
-          <div key={index}>
-            <p>&#x2705; {item}</p>
-          </div>
-        ))}
-      </section>
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", marginTop: "2rem" }}>
         <h3>Roadmap</h3>
         <p>Initial Plan for {tokenData.title}</p>
         <Grid
@@ -111,7 +114,7 @@ const About = ({ data }) => {
                   : value === 30
                   ? "Coingecko Listing"
                   : value === 40
-                  ? "Coings Hunt Listing"
+                  ? "Coins Hunt Listing"
                   : value === 50
                   ? "Dexxtools Listing"
                   : "Launchpool Rewards"

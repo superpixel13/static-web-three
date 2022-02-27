@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
               },
             },
             color: {
-              value: "#F1D593",
+              value: "#040A1A",
             },
             shape: {
               type: "circle",
@@ -137,9 +137,9 @@ const Layout = ({ children }) => {
             cover: {
               color: {
                 value: {
-                  r: 165,
-                  g: 144,
-                  b: 39,
+                  r: 24,
+                  g: 30,
+                  b: 50,
                 },
               },
             },

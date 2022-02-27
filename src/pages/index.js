@@ -13,15 +13,20 @@ export default function Home({ data }) {
     {
       title: "Safe & Secure",
       description:
-        "Liquidity will be fully locked and 1% of every buy will go to the Liquidity",
+        "Community driven & fair launch. Dev burned 90% supply and add 20% to LP on Pancakeswap. Burn 100% LP tokens and Renounce Ownership. Funds 100% SAFU",
     },
     {
-      title: "Passive Income",
-      description: `1% Reflection Rewards will be distributed on each transaction fee based on the share of this token ${tokenInfo.title}`,
+      title: "Automatic Liquidity Pool",
+      description: `8% of every transaction goes to liquidity on PancakeSwap which will benefit for ${tokenInfo.title}'s Coin holders`,
     },
     {
       title: "Marketing",
       description: "10% is devoted towards marketing.",
+    },
+    {
+      title: "Anti Whale Dump",
+      description:
+        "Sell and buy transaction that trade more than 0.05% of the total supply will be rejected. This will prevent whales to pump and dump",
     },
   ]
   return (
@@ -32,7 +37,7 @@ export default function Home({ data }) {
         alignItems="center"
         className={header}
         style={{
-          backgroundColor: "#F1D593",
+          backgroundColor: "#040A1A",
           maxWidth: "75rem",
           marginLeft: "0.1rem",
           borderRadius: "1rem",
@@ -40,16 +45,15 @@ export default function Home({ data }) {
       >
         <Grid item md={6} style={{ padding: "2rem" }}>
           <div>
-            <h2 style={{ textShadow: "2px 2px 2px black" }}>
-              Access the power of the blockchain.
-            </h2>
-            {/* <h3></h3> */}
-            <p style={{ textTransform: "capitalize", color: "#332300" }}>
-              <span style={{ color: "#896001", fontWeight: "bold" }}>
+            <h3 style={{ textShadow: "2px 2px 2px black" }}>
+              Invest in the Future of the power of the blockchain.
+            </h3>
+            <p style={{ textTransform: "capitalize", color: "white" }}>
+              <span style={{ color: "#AE903F", fontWeight: "bold" }}>
                 {tokenInfo.title}
-              </span>{" "}
-              is a decentralized marketing platform that allows merchants and
-              affiliates to participate.
+              </span>
+              's main goal is to bring million of new retail investors to crypto
+              by eliminating all fiat obstacles on the way to crypto.
             </p>
             {/* <a
               style={{ marginRight: "1rem" }}
@@ -91,7 +95,7 @@ export default function Home({ data }) {
               backgroundColor: "#80C9EC",
               marginTop: "2rem",
             }}
-            href="https://t.me/OsakaInu2K22"
+            href="google.com"
           >
             <img
               src="/telegramlogo.png"
@@ -113,7 +117,11 @@ export default function Home({ data }) {
         </Grid>
         <Grid item md={6}>
           <Img
-            style={{ maxWidth: "30rem", marginLeft: "2rem" }}
+            style={{
+              maxWidth: "30rem",
+              marginLeft: "2rem",
+              borderRadius: "15rem",
+            }}
             alt="abstract-building"
             fluid={data.file.childImageSharp.fluid}
           />
@@ -130,7 +138,9 @@ export default function Home({ data }) {
           <h2 style={{ textShadow: "2px 2px 2px black", marginBottom: "2rem" }}>
             Welcome to {tokenInfo.title}!
           </h2>
-          <div>
+          <CardComponent title="PolyFairy Project is a platform in the world of decentralized finance (DeFi) or non-middleman financial intermediaries. The project will focus on memecoins, or micro-cap tokens, as well as being an all-in-one platform for both whom looking to invest in these tokens and new developers who want to advertise their own projects." />
+
+          {/* <div>
             <video
               autoPlay
               loop
@@ -143,7 +153,7 @@ export default function Home({ data }) {
             >
               <source type="video/mp4" src="/osakainu2k22Video.mp4"></source>
             </video>
-          </div>
+          </div> */}
         </Grid>
         <Grid item style={{ marginBottom: "2rem" }}>
           <h2 style={{ textTransform: "capitalize" }}>What our token offers</h2>
@@ -189,7 +199,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativePath: { eq: "osakainu.jpg" }) {
+    file(relativePath: { eq: "tiger-charm.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
