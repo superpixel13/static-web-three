@@ -46,7 +46,7 @@ export default function Home({ data }) {
         <Grid item md={6} style={{ padding: "2rem" }}>
           <div>
             <h3 style={{ textShadow: "2px 2px 2px black" }}>
-              Invest in the Future of the power of the blockchain.
+              Invest in the Future and the Power of the blockchain.
             </h3>
             <p style={{ textTransform: "capitalize", color: "white" }}>
               <span style={{ color: "#AE903F", fontWeight: "bold" }}>
@@ -95,7 +95,7 @@ export default function Home({ data }) {
               backgroundColor: "#80C9EC",
               marginTop: "2rem",
             }}
-            href="google.com"
+            href="https://web.telegram.org/z/"
           >
             <img
               src="/telegramlogo.png"
@@ -138,7 +138,9 @@ export default function Home({ data }) {
           <h2 style={{ textShadow: "2px 2px 2px black", marginBottom: "2rem" }}>
             Welcome to {tokenInfo.title}!
           </h2>
-          <CardComponent title="PolyFairy Project is a platform in the world of decentralized finance (DeFi) or non-middleman financial intermediaries. The project will focus on memecoins, or micro-cap tokens, as well as being an all-in-one platform for both whom looking to invest in these tokens and new developers who want to advertise their own projects." />
+          <CardComponent
+            title={`${tokenInfo.title} Project is a platform in the world of decentralized finance (DeFi) or non-middleman financial intermediaries. The project will focus on memecoins, or micro-cap tokens, as well as being an all-in-one platform for both whom looking to invest in these tokens and new developers who want to advertise their own projects.`}
+          />
 
           {/* <div>
             <video
